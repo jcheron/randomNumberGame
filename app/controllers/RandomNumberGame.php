@@ -34,6 +34,7 @@ class RandomNumberGame extends ControllerBase{
 
 	public function soumet(){
 		$nombre=URequest::post("number");
+		$nbAleat=USession::get(self::SESSION_KEY);
 		$this->loadView('RandomNumberGame/soumet.html',['nb'=>$nombre]);
 
 	}
